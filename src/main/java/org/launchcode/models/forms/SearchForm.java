@@ -21,6 +21,7 @@ public class SearchForm {
     }
 
     public void setSearchField(JobFieldType searchField) {
+
         this.searchField = searchField;
     }
 

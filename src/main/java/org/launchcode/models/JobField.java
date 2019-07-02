@@ -20,6 +20,7 @@ public class JobField {
     }
 
     public boolean contains(String value) {
+
         return this.value.toLowerCase().contains(value.toLowerCase());
     }
 

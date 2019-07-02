@@ -19,6 +19,7 @@ public class JobData {
 
 
     private JobData() {
+
         JobDataImporter.loadData(this);
     }
 
@@ -44,7 +45,8 @@ public class JobData {
     }
 
 
-    public ArrayList<Job> findByColumnAndValue(JobFieldType column, String value) {
+    public ArrayList<Job> findByColumnAndValue(JobFieldType column,
+                                               String value) {
 
         ArrayList<Job> matchingJobs = new ArrayList<>();
 
@@ -69,7 +71,8 @@ public class JobData {
             }
 
             for (JobFieldType column : JobFieldType.values()) {
-                if (column != JobFieldType.ALL && getFieldByType(job, column).contains(value)) {
+                if (column != JobFieldType.ALL &&
+                        getFieldByType(job, column).contains(value)) {
                     matchingJobs.add(job);
                     break;
                 }
@@ -109,10 +112,12 @@ public class JobData {
     }
 
     public JobFieldData<CoreCompetency> getCoreCompetencies() {
+
         return coreCompetencies;
     }
 
     public JobFieldData<PositionType> getPositionTypes() {
+
         return positionTypes;
     }
 }
